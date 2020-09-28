@@ -34,7 +34,10 @@ app.on('before-quit', e => {
 })
 
 // Electron `app` is ready
-app.on('ready', createWindow)
+app.on('ready', () => {
+    console.log('App is ready!')
+    createWindow
+})
 
 // Quit when all windows are closed - (Not macOS - Darwin)
 app.on('window-all-closed', () => {
