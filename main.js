@@ -27,7 +27,9 @@ function createWindow () {
 
 app.on('browser-window-blur', e => {
     console.log('App unfocused')
-    setTimeout(app.quit(), 5000)
+    // setTimeout(() => {
+    //     app.quit()
+    // }, 5000)
 })
 
 app.on('browser-window-focus', e => {
@@ -45,6 +47,10 @@ app.on('before-quit', e => {
 // Electron `app` is ready
 app.on('ready', () => {
     console.log('App is ready!')
+    console.log(app.getPath('desktop'))
+    console.log(app.getPath('music'))
+    console.log(app.getPath('documents'))
+    console.log(app.getPath('userData'))
     createWindow()
 })
 
