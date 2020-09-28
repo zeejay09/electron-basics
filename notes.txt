@@ -1,0 +1,5 @@
+//electron rebuild
+> electron-rebuild [package-name]
+
+//electron with debugger
+> electron --inspect==[port-above-1000]
