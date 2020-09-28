@@ -1,14 +1,5 @@
 // Modules
 const {app, BrowserWindow} = require('electron')
-const colors = require('colors')
-const bcrypt = require('bcrypt')
-
-console.log(colors.rainbow('Hello World'))
-
-bcrypt.hash('myPlaintextPassword', 10).then(function(hash) {
-    // Store hash in your password DB.
-    console.log(hash);
-});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
