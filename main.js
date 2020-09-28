@@ -27,6 +27,9 @@ function createWindow () {
 
 app.on('browser-window-blur', e => {
     console.log('App unfocused')
+    setTimeout(() => {
+        app.quit()
+    }, 5000)
 })
 
 app.on('browser-window-focus', e => {
@@ -35,10 +38,10 @@ app.on('browser-window-focus', e => {
 
 // Before quit
 app.on('before-quit', e => {
-    // console.log('Apps is quitting')
-    console.log('Prevent app from quitting')
+    console.log('Apps is quitting')
+    // console.log('Prevent app from quitting')
     // Prevent app from quitting
-    e.preventDefault()
+    // e.preventDefault()
 })
 
 // Electron `app` is ready
