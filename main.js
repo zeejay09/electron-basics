@@ -20,7 +20,9 @@ function createWindow () {
     webPreferences: { nodeIntegration: true },
     parent: mainWindow,
     modal: true,
-    show: false
+    show: false,
+    frame: false
+    // titleBarStyle: 'hidden'
   })
 
   // Load index.html into the new BrowserWindow
