@@ -25,6 +25,14 @@ function createWindow () {
   })
 }
 
+// Before quit
+app.on('before-quit', e => {
+    // console.log('Apps is quitting')
+    console.log('Prevent app from quitting')
+    // Prevent app from quitting
+    e.preventDefault()
+})
+
 // Electron `app` is ready
 app.on('ready', createWindow)
 
