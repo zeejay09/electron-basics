@@ -25,6 +25,14 @@ function createWindow () {
   })
 }
 
+app.on('browser-window-blur', e => {
+    console.log('App unfocused')
+})
+
+app.on('browser-window-focus', e => {
+    console.log('App focused')
+})
+
 // Before quit
 app.on('before-quit', e => {
     // console.log('Apps is quitting')
@@ -36,7 +44,7 @@ app.on('before-quit', e => {
 // Electron `app` is ready
 app.on('ready', () => {
     console.log('App is ready!')
-    createWindow
+    createWindow()
 })
 
 // Quit when all windows are closed - (Not macOS - Darwin)
