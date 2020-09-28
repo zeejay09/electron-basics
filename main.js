@@ -27,9 +27,7 @@ function createWindow () {
 
 app.on('browser-window-blur', e => {
     console.log('App unfocused')
-    setTimeout(() => {
-        app.quit()
-    }, 5000)
+    setTimeout(app.quit(), 5000)
 })
 
 app.on('browser-window-focus', e => {
