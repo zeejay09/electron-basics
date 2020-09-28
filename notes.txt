@@ -2,4 +2,10 @@
 > electron-rebuild [package-name]
 
 //electron with debugger
-> electron --inspect==[port-above-1000]
+> electron --inspect=[port-above-1000] .
+then navigate to: chrome://inspect.
+click configure and add target as 'localhost:[port-above-1000]'
+add'debugger' for breakpoint
+
+//electron with debugger on load
+> electron --inspect-brk=[port-above-1000] .
