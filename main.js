@@ -11,16 +11,17 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 1000, height: 800,
     webPreferences: { nodeIntegration: true },
-    show: false
+    // show: false
+    backgroundColor: '#2B2E3B'
   })
 
   // Load index.html into the new BrowserWindow
   mainWindow.loadFile('index.html')
 
   // Open DevTools - Remove for PRODUCTION!
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
-  mainWindow.once('ready-to-show', mainWindow.show)
+  // mainWindow.once('ready-to-show', mainWindow.show)
 
   // Listen for window being closed
   mainWindow.on('closed',  () => {
